@@ -52,7 +52,12 @@ function renderTable(people) {
         const row = document.createElement("tr");
         row.innerHTML = `
             <td><b>${person.name}</b></td>
-            <td>${person.gender}</td>
+            <td>
+                <div class="gender-cell">
+                    <span class="material-symbols-outlined">${person.gender}</span>
+                    ${person.gender}
+                </div>
+            </td>
             <td>$${person.salary}</td>
             <td>${person.rating}</td>
             <td><button class="hire-btn | button-accent">Hire</button></td>

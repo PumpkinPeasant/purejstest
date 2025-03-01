@@ -70,6 +70,16 @@
     color: #646cff;
 }
 
+.gender-cell{
+    display: flex;
+    gap: 2px;
+    place-items: center;
+}
+
+.gender-cell span{
+    font-size: 20px;
+}
+
 .hire-btn {
     width: 100%;
 }
