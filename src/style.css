@@ -95,6 +95,17 @@ button:focus-visible {
   filter: drop-shadow(0 0 1em #646cffaa);
 }
 
+.button-disabled {
+  background-color: #1a1a1a;
+  border: 1px solid #242424;
+}
+
+.button-disabled:hover,  .button-disabled:active{
+  background-color: #1a1a1a;
+  filter: none;
+  border-color: #242424;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -140,5 +151,9 @@ button:focus-visible {
 .content-table tbody tr.active-row {
   font-weight: bold;
   color: #646cff;
+}
+
+.hire-btn {
+  width: 100%;
 }
 
