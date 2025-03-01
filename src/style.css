@@ -77,9 +77,22 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
+button:active,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: #242424;
+}
+
+.button-accent {
+  background-color: #646cff;
+  transition: all 0.2s;
+}
+
+.button-accent:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.button-accent:active {
+  filter: drop-shadow(0 0 1em #646cffaa);
 }
 
 @media (prefers-color-scheme: light) {
@@ -94,3 +107,38 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 500px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #646cff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #1a1a1a;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #646cff;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #646cff;
+}
+
