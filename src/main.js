@@ -1,4 +1,4 @@
-import './style.css'
+import './styles/style.css'
 import {fakeApi} from "./fakeApi.js";
 
 class Person {
@@ -70,3 +70,37 @@ function renderTable(people) {
         tableBody.appendChild(row);
     })
 }
+
+function sortTable() {
+    let sortOrder = null;
+    let sortField = null;
+
+    const tableHeaders = document.querySelectorAll(".thead-item__sort");
+
+    tableHeaders.forEach(header => {
+        header.addEventListener("click", (e) => {
+            const sortContainer = e.target.closest(".thead-item__sort");
+            if (!sortContainer) return;
+
+            const field = sortContainer.getAttribute("aria-label");
+            const currentOrder = sortContainer.getAttribute("aria-sort");
+
+            sortOrder = (sortField === field && currentOrder === "descending") ? "ascending" : "descending";
+            sortField = field;
+
+            tableHeaders.forEach(h => h.setAttribute("aria-sort", 'none'));
+            sortContainer.setAttribute("aria-sort", sortOrder);
+
+            people.sort(byField(sortField, sortOrder));
+            renderTable(people);
+        });
+    })
+
+    function byField(fieldName, order) {
+        order = order === 'descending' ? 1 : -1;
+        return (a, b) => a[fieldName] > b[fieldName] ? 1 * order : -1 * order;
+    }
+
+}
+
+sortTable();

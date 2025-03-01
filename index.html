@@ -1,29 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app">
-      <h1>Employee's</h1>
-      <table id="employeeTable" class="content-table">
+</head>
+<body>
+<div id="app">
+    <h1>Employee's</h1>
+    <table id="employeeTable" class="content-table">
         <thead>
         <tr>
-          <th>Name</th>
-          <th>Gender</th>
-          <th>Salary</th>
-          <th>Rating</th>
-          <th width="150"></th>
+            <th>
+                <div class="thead-item">
+                    <span class="thead-item_title">Name</span>
+                    <div class="thead-item__sort" aria-label="name" aria-sort="none">
+                        <span class="sort-up material-symbols-outlined">arrow_drop_up</span>
+                        <span class="sort-down material-symbols-outlined">arrow_drop_down</span>
+                    </div>
+                </div>
+            </th>
+            <th>
+                <div class="thead-item">
+                    <span class="thead-item_title">Gender</span>
+                    <div class="thead-item__sort" aria-label="gender" aria-sort="none">
+                        <span class="sort-up material-symbols-outlined">arrow_drop_up</span>
+                        <span class="sort-down material-symbols-outlined">arrow_drop_down</span>
+                    </div>
+                </div>
+            </th>
+            <th>
+                <div class="thead-item">
+                    <span class="thead-item_title">Salary</span>
+                    <div class="thead-item__sort" aria-label="salary" aria-sort="none">
+                        <span class="sort-up material-symbols-outlined">arrow_drop_up</span>
+                        <span class="sort-down material-symbols-outlined">arrow_drop_down</span>
+                    </div>
+                </div>
+            </th>
+            <th>
+                <div class="thead-item">
+                    <span class="thead-item_title">Rating</span>
+                    <div class="thead-item__sort" aria-label="rating" aria-sort="none">
+                        <span class="sort-up material-symbols-outlined">arrow_drop_up</span>
+                        <span class="sort-down material-symbols-outlined">arrow_drop_down</span>
+                    </div>
+                </div>
+            </th>
+            <th width="150"></th>
         </tr>
         </thead>
         <tbody>
 
         </tbody>
-      </table>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    </table>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
 </html>
