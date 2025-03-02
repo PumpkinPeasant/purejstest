@@ -1,0 +1,70 @@
+:root {
+    /* --neon-color: #510CEF; */
+    --neon-color: #646cff;
+}
+
+.neon {
+    font-family: 'Lobster', sans-serif;
+    font-size: 70px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 4px;
+    animation: pulsate 1.5s infinite alternate;
+    text-shadow:
+            0 0 2px #FFF,
+            0 0 4px #FFF,
+            0 0 6px #FFF,
+            0 0 15px var(--neon-color),
+            0 0 23px var(--neon-color),
+            0 0 36px var(--neon-color),
+            0 0 42px var(--neon-color),
+            0 0 67px var(--neon-color);
+}
+
+
+@keyframes pulsate {
+    0% {
+        text-shadow:
+                0 0 2px #FFF,
+                0 0 4px #FFF,
+                0 0 6px #FFF,
+                0 0 15px var(--neon-color),
+                0 0 23px var(--neon-color),
+                0 0 36px var(--neon-color),
+                0 0 42px var(--neon-color),
+                0 0 67px var(--neon-color);
+    }
+
+    100% {
+        text-shadow:
+                0 0 5px #FFF,
+                0 0 9px #FFF,
+                0 0 18px #FFF,
+                0 0 36px var(--neon-color),
+                0 0 49px var(--neon-color),
+                0 0 65px var(--neon-color),
+                0 0 89px var(--neon-color),
+                0 0 140px var(--neon-color);
+    }
+}
+
+
+.flicker-slow {
+    animation: flicker 3s linear infinite;
+}
+
+.flicker-fast {
+    animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    / / text-shadow: none;
+        opacity: .99;
+
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+    }
+}
+

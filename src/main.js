@@ -1,4 +1,5 @@
 import './styles/style.css'
+import './styles/neon.css'
 import {fakeApi} from "./fakeApi.js";
 
 class Person {
